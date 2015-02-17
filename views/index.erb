@@ -3,4 +3,11 @@ img {border:3px dashed red}
 </style>
 <div>
   <img src='http://bit.ly/1eze8aE' />
+  <br />
+  <% if @visitor %>
+    Hallo <%=@visitor%>, velkommen.
+  <%end%>
+  <%if @name%>
+  <h3>Hei! Mitt navn er <%=@name%>!</h3>
+  <%end%>
 </div>
