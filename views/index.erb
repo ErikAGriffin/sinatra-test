@@ -1,13 +1,20 @@
 <style type='text/css'>
 img {border:3px dashed red}
+
 </style>
+
+
 <div>
   <img src='http://bit.ly/1eze8aE' />
   <br />
   <% if @visitor %>
     Hallo <%=@visitor%>, velkommen.
-  <%end%>
-  <%if @name%>
-  <h3>Hei! Mitt navn er <%=@name%>!</h3>
+  <% else %>
+    <form action='/hello'>
+      Hei! Jeg heter <%=@name%>.
+      Hva heter du?
+      <input type='text' name='name'>
+      <input type='submit'>
+    </form>
   <%end%>
 </div>
